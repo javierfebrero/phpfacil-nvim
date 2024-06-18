@@ -7,6 +7,7 @@ local modulo_controlador = require("phpfacil-nvim.modulo-controlador")
 local modulo_enum = require("phpfacil-nvim.modulo-enum")
 local modulo_interface = require("phpfacil-nvim.modulo-interface")
 local modulo_trait = require("phpfacil-nvim.modulo-trait")
+local modulo_comentario = require("phpfacil-nvim.modulo-comentario")
 
 ---@class Config
 ---@field opt string Your config option
@@ -53,9 +54,11 @@ end
 M.crear_trait = function(args)
 	return modulo_trait.crear_trait(args)
 end
-
 M.crear_enum = function(args)
 	return modulo_enum.crear_enum(args)
+end
+M.crear_comentario = function()
+	return modulo_comentario.crear_comentario()
 end
 
 return M
