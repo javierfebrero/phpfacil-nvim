@@ -2,6 +2,11 @@
 local modulo_firma = require("phpfacil-nvim.modulo-firma")
 local modulo_constant = require("phpfacil-nvim.modulo-constant")
 local modulo_class = require("phpfacil-nvim.modulo-class")
+local modulo_abstract_class = require("phpfacil-nvim.modulo-abstract-class")
+local modulo_controlador = require("phpfacil-nvim.modulo-controlador")
+local modulo_enum = require("phpfacil-nvim.modulo-enum")
+local modulo_interface = require("phpfacil-nvim.modulo-interface")
+local modulo_trait = require("phpfacil-nvim.modulo-trait")
 
 ---@class Config
 ---@field opt string Your config option
@@ -36,4 +41,21 @@ end
 M.crear_constant = function(args)
 	return modulo_constant.crear_constant(args)
 end
+M.crear_abstract_class = function(args)
+	return modulo_abstract_class.crear_abstract_class(args)
+end
+M.crear_controlador = function(args)
+	return modulo_controlador.crear_controller(args)
+end
+M.crear_interface = function(args)
+	return modulo_interface.crear_interface(args)
+end
+M.crear_trait = function(args)
+	return modulo_trait.crear_trait(args)
+end
+
+M.crear_enum = function(args)
+	return modulo_enum.crear_enum(args)
+end
+
 return M

@@ -1,0 +1,45 @@
+local utils = require("phpfacil-nvim.utils")
+
+---@class AbstractClass
+local M = {}
+
+---@return string
+function M.crear_abstract_class(nombre)
+  utils.insertar_linea("<?php")
+  utils.insertar_linea("")
+  utils.insertar_linea("declare(strict_types=1);")
+  utils.insertar_linea("")
+  utils.insertar_linea("namespace añadir\\nombre\\final;")
+  utils.insertar_linea("")
+  utils.insertar_linea("/**")
+  utils.insertar_linea(" * Clase abstracta %s", nombre)
+  utils.insertar_linea(" *")
+  utils.insertar_linea(" * @package añadir\\nombre\\final")
+  utils.insertar_linea(" */")
+  utils.insertar_linea("abstract class %s", nombre)
+  utils.insertar_linea("{")
+  utils.insertar_linea("    /**")
+  utils.insertar_linea("     * @var string Una propiedad de ejemplo")
+  utils.insertar_linea("     */")
+  utils.insertar_linea("    protected string $propiedad;")
+  utils.insertar_linea("")
+  utils.insertar_linea("    /**")
+  utils.insertar_linea("     * Constructor de la clase")
+  utils.insertar_linea("     *")
+  utils.insertar_linea("     * @param string $propiedad Un argumento de ejemplo")
+  utils.insertar_linea("     */")
+  utils.insertar_linea("    public function __construct(string $propiedad)")
+  utils.insertar_linea("    {")
+  utils.insertar_linea("        $this->propiedad = $propiedad;")
+  utils.insertar_linea("    }")
+  utils.insertar_linea("")
+  utils.insertar_linea("    /**")
+  utils.insertar_linea("     * Un método abstracto de ejemplo")
+  utils.insertar_linea("     *")
+  utils.insertar_linea("     * @return void")
+  utils.insertar_linea("     */")
+  utils.insertar_linea("    abstract public function metodoEjemplo(): void;")
+  utils.insertar_linea("}")
+end
+
+return M
