@@ -24,8 +24,9 @@ M.setup = function(args)
 	M.config = vim.tbl_deep_extend("force", M.config, args or {})
 end
 
-M.crear_firma = function()
-	return modulo_firma.crear_firma()
+M.crear_firma = function(opts)
+	local args = vim.split(opts, " ")
+	return modulo_firma.crear_firma(args[1], args[2], args[3], args[4])
 end
 
 -- M.crear_class = function()

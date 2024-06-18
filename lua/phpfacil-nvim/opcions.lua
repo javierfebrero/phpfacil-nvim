@@ -5,17 +5,12 @@ local firma = {
 	{ linea = "/**", valor = "" },
 	{ linea = "* @package		%s", valor = "COM_ODT" },
 	{ linea = "* @subpackage	%s ", valor = "odt_package" },
-	{ linea = "* @author		%s ", valor = "Javier Fernández Febrero <javiferfeb@live.com>" },
+	{ linea = "* @author		%s ", valor = "Javier_Fernández_Febrero <ffebrero.javier@gmail.com>" },
 	{ linea = "*/", valor = "" },
 }
 
 ---@field Constant string Your config option
-local constant = {
-	{ linea = "const %s = '' ", valor = "CONSTANTE" },
-	{ linea = "public function get%s () {", valor = "Constante" },
-	{ linea = "return self::%s; ", valor = "CONSTANTE" },
-	{ linea = "}", valor = "" },
-}
+local constant = {}
 
 local M = {}
 

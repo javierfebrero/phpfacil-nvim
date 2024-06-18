@@ -1,8 +1,8 @@
 ---@class Utils
 local M = {}
 
-M.insertar_linea = function(linea, valor)
-	local linea_formateada = string.format(linea, valor)
+M.insertar_linea = function(linea, valor, opcion)
+	local linea_formateada = string.format(linea, valor, opcion)
 	vim.api.nvim_put({ linea_formateada }, "l", false, true)
 end
 
