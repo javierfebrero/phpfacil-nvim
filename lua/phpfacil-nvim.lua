@@ -1,6 +1,7 @@
 -- main module file
 local modulo_firma = require("phpfacil-nvim.modulo-firma")
 local modulo_constant = require("phpfacil-nvim.modulo-constant")
+local modulo_class = require("phpfacil-nvim.modulo-class")
 
 ---@class Config
 ---@field opt string Your config option
@@ -29,9 +30,9 @@ M.crear_firma = function(opts)
 	return modulo_firma.crear_firma(args[1], args[2], args[3], args[4])
 end
 
--- M.crear_class = function()
--- 	return module.crear_firma()
--- end
+M.crear_class = function(args)
+	return modulo_class.crear_class(args)
+end
 M.crear_constant = function(args)
 	return modulo_constant.crear_constant(args)
 end
